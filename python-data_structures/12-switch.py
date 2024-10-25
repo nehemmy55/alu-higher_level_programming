@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-def replace_in_list(my_list, idx, element):
-    if idx >= 0 and idx < len(my_list):
-        my_list[idx] = element
-        return my_list
-    else:
-        return my_list
+a = 89
+b = 10
+a, b = b, a
+print("a={:d} - b={:d}".format(a, b))
