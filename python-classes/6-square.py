@@ -1,25 +1,25 @@
 #!/usr/bin/python3
-"""Define and declare square"""
+"""Define a square"""
 
 
 class Square:
-    """Creates class square.
-    Private instance  size
+    """Creates a square.
+    Private instance attributes: size
     """
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initialization."""
+        """Initialize data."""
         self.__size = size
         self.__position = position
 
     @property
     def size(self):
-        """Retrieve size by getters."""
+        """Retrieve size."""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """use setter to set value."""
+        """Sets size to a value."""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -27,18 +27,18 @@ class Square:
         self.__size = value
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initialization."""
+        """Initializes the data."""
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """Retrieves size by getters."""
+        """Retrieves the size."""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Setters set  the size to value."""
+        """Sets the size to a value."""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -47,12 +47,12 @@ class Square:
 
     @property
     def position(self):
-        """Retrieves the position by getter."""
+        """Retrieves the position."""
         return self.__position
 
     @position.setter
     def position(self, value):
-        """use setters method."""
+        """Sets position to a value."""
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         if not isinstance(value[0], int) or not isinstance(value[1], int):
@@ -62,7 +62,7 @@ class Square:
         self.__position = value
 
     def area(self):
-        """Returns the current sqaure area."""
+        """Returns the current square area."""
         return self.__size ** 2
 
     def my_print(self):
@@ -77,4 +77,4 @@ class Square:
                     print(' ', end="")
                 for o in range(self.__size):
                     print("#", end="")
-                print()i
+                print()
