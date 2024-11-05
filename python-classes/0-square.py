@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-""" 
-creation of class and definition of class
 """
-class square:
+no module for  empty class Square.
+"""
+
+
+class Square:
     """
-    define empty class
+   define  empty class a square.
     """
     pass
