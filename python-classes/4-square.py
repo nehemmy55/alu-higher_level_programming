@@ -3,7 +3,7 @@
 
 
 class Square:
-    """Creates class square.
+    """Creates a class square.
     Private instance size
     """
 
@@ -13,18 +13,18 @@ class Square:
 
     @property
     def size(self):
-        """Retrieve size by getter method ."""
+        """Retrieve size by getter."""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Sets size to valueby setters."""
+        """use setter method size to a value."""
         if not isinstance(value, int):
-            raise TypeError("size must be integer")
+            raise TypeError("size must be an integer")
         elif value < 0:
-            raise ValueError("size must be greater or equal 0")
+            raise ValueError("size must be >= 0")
         self.__size = value
 
     def area(self):
-        """Returns arae of spauare"""
+        """Returns area square."""
         return self.__size ** 2
